@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Favorite Holidays</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" src="./assets/css/style.css">
+  
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Holiday Search</h1>
+
+        <!-- Buttons will Get Dumped Here -->
+        <div id="buttons-view"></div>
+        <div id="holiday-button">
+            <button data-holiday="christmas">Christmas</button>
+        </div>
+            <form id="holiday-form">
+                <label for="holiday-input">Add a Holiday</label>
+                <input type="text" id="holiday-input"><br>
+                
+                <!-- Button triggers new holiday to be added -->
+                <input id="add-holiday" type="submit" value="Submit">
+            </form>
+            <div id="holiday-view"></div>
+    </div>
+
+
+
+
+
+    <script rel="javascript" src="./assets/javascript/giphyapi.js"></script>
+</body>
