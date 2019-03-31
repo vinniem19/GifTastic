@@ -7,6 +7,14 @@ console.log(topic);
 
 var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Fpy46RCZ5r7l1RWFL71kJzbyOTffX7Ig&q=christmas&limit=10&rating=pg";
 
+// I will need an onclick function to hold all that data until the click
+      $("button").on("click", function (event) {
+      event.preventDefault();
+  // This line of code will grab the input from the textbox
+      var holiday = $("#holiday-input").val().trim();
+
+// The movie from the textbox is then added to our array
+      topic.push(holiday);
 // Putting this array into buttons on a page
 // This will create the onClick event listener to make the holiday button clickable
 
@@ -27,7 +35,7 @@ var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Fpy46RCZ5r7l1RWFL71
         let p = $("<p>").text("Rating: " + rating);
 
         let holidayImage = $("<img>");
-        var imageUrl = response.data.image_original_url;
+        var imageUrl = results[i].images.fixed_height.url;
 
         // This variable will hold the html image element
         // This creates the source attribute for the holiday image var and provide alt text tag
@@ -39,16 +47,10 @@ var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Fpy46RCZ5r7l1RWFL71
         gifDiv.prepend(holidayImage);
 
         // Here we put the div with the holiday image, p, and rating before the images already created. 
-        $("#holiday-view").prepend(gifDiv);
+            $("#holiday-view").prepend(gifDiv);
       }
-      
-
-        
         
 
     
-      });
-
-  
-
-         
+      })
+    })
