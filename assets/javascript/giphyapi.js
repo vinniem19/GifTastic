@@ -20,7 +20,7 @@ $(document).on("click", ".active-gif", function () {
       event.preventDefault();
   // This line of code will grab the input from the textbox
       let holidayInput = $("#holiday-input").val().trim();
-        $("#holidays-input").empty();
+        $("#holiday-input").val('');
         // The holiday from the user input is then added to our array
       topic.push(holidayInput);
       
