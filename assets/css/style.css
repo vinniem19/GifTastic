@@ -4,3 +4,19 @@ button,
     input {
       margin: 10px;
     }
+
+#buttons-view {
+        margin: 20px;
+    }
+
+.holiday {
+    margin: 10px;
+}
+
+body {
+    background: gray;
+}
+
+.active-gif {
+    display: none;
+}
