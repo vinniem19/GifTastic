@@ -3,9 +3,18 @@
 let topic = ["Christmas", "Easter", "4th of July", "New Year"];
 console.log(topic);
 
-    
+// This is where my gifs will change to animate or still; these two click listeners replace
+// the for loop that we had in the still gif activity.
+$(document).on("click", ".still-gif", function () {
+  $(this).siblings(".active-gif").show();
+  $(this).hide();
+})
 
-  
+$(document).on("click", ".active-gif", function () {
+  $(this).siblings(".still-gif").show();
+  $(this).hide();
+})
+      
     // When user clicks submit, the button is added (using the renderButtons function below) 
       $("#add-holiday").on("click", function (event) {
       event.preventDefault();
