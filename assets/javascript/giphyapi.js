@@ -41,9 +41,13 @@ console.log(topic);
                 gifImage1.addClass("active-gif");
                 let imageUrl = results[i].images.fixed_height.url;
                 gifImage1.attr("src", imageUrl);
+                let gifImage2 = $("<img>");
+                gifImage2.addClass("still-gif");
+                let imageUrl2 = results[i].images.fixed_height_still.url; //check location
+                gifImage2.attr("src", imageUrl2);
                 
                 
-                gifDiv.prepend(para).append(gifImage1);
+                gifDiv.prepend(para).append(gifImage1).append(gifImage2);
                 
                 // Here we put the div with the holiday image, p, and rating before the images already created. 
                 $("#holiday-view").prepend(gifDiv);
@@ -76,7 +80,10 @@ function renderButtons() {
   renderButtons();
   
     // I will need an onclick function to hold all this data until the click
-    
+    $(document).on("click", ".holiday", function() {
+      displayGiphy($(this).attr("data-name"));
+
+    });
     
     
     
